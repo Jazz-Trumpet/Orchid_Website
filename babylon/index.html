@@ -16,10 +16,10 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
 
     <style>
-        html,
-        body {
+        html, body {
             overflow: hidden;
             width: 100%;
             height: 100%;
@@ -38,9 +38,16 @@
 <body>
     <canvas id="renderCanvas"></canvas>
 
-    <!--- GUI Display Creation Section: Follow this format -->
-  
+    <!--- GUI Display Creation Section: Follow this format
+    $('body').append('<h1 id="gui elem 1" style="position: absolute; right: 10px; top: 60px;">gui elem 1</h1>');
+    $('body').append('<h1 id="gui elem 2" style="position: absolute; right: 10px; top: 100px;">gui elem 2</h1>');-->
 
+    $('body').append(
+        '<div class="mainDiv" style="position: absolute; right: 10px; top: 160px;">
+            <h1>Firebase File Upload</h1>
+            <progress id="uploader" value="0" max="100">0%</progress>
+            <input type="file" id="fileButton" value="upload" />
+        </div>');
 
     <script>
         // Your web app's Firebase configuration

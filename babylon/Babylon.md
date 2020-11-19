@@ -1,8 +1,15 @@
 ---
 layout: default
 title: Babylon js
-img: "assets/img/portfolio/reading.jpg"
-tags: [babylon, Imagination, Reading]
+tags: [babylon]
 ---
 
 {% include_relative index.html %}
+<style>
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+
+article {padding:2%;}
+
+</style>

@@ -10,7 +10,7 @@
     <script src="https://preview.babylonjs.com/gltf_validator.js"></script>
     <script src="https://preview.babylonjs.com/babylon.js"></script>
     <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
-
+    <script src="https://preview.babylonjs.com/gui/babylon.gui.js"></script>
     <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
 
     <!-- Firebase -->
@@ -18,8 +18,12 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
 
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <style>
-        html, body {
+        html,
+        body {
             overflow: hidden;
             width: 100%;
             height: 100%;
@@ -42,12 +46,12 @@
     $('body').append('<h1 id="gui elem 1" style="position: absolute; right: 10px; top: 60px;">gui elem 1</h1>');
     $('body').append('<h1 id="gui elem 2" style="position: absolute; right: 10px; top: 100px;">gui elem 2</h1>');-->
 
-    $('body').append(
-        '<div class="mainDiv" style="position: absolute; right: 10px; top: 160px;">
-            <h1>Firebase File Upload</h1>
-            <progress id="uploader" value="0" max="100">0%</progress>
-            <input type="file" id="fileButton" value="upload" />
-        </div>');
+    
+    <div class="mainDiv" style="position: absolute; right: 10px; top: 160px;">
+        <h1>Firebase File Upload</h1>
+        <progress id="uploader" value="0" max="100">0%</progress>
+        <input type="file" id="fileButton" value="upload" />
+    </div>
 
     <script>
         // Your web app's Firebase configuration
@@ -65,14 +69,8 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.firestore();
-        // test get from firebase
-        db.collection('musics').get().then((snapshot) => {
-            snapshot.docs.forEach(doc => {
-                console.log(doc.data());
-            })
-        })
     </script>
-
+    <script src="firebase.js"></script>
     <script src="main.js"></script>
 </body>
 

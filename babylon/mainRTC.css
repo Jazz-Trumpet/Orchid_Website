@@ -1,3 +1,4 @@
+
 body {
     background: #ECEFF1;
     color: rgba(0, 0, 0, 0.87);
@@ -7,7 +8,7 @@ body {
 }
 
 #message {
-    background:#af0202;
+    background: white;
     max-width: 360px;
     margin: 100px auto 16px;
     padding: 32px 24px;

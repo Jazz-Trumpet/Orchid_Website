@@ -146,7 +146,7 @@ var createScene = function () {
 
     // Enable VR
     var vrHelper = scene.createDefaultVRExperience({createDeviceOrientationCamera:false});
-    vrHelper.enableTeleportation({floorMeshes: [box]});
+    vrHelper.enableInteractions();
 
     // Audio Creation
     var isMusicPlaying = false;

@@ -59,7 +59,7 @@ body {
 @media (max-width: 600px) {
     body, #message {
         margin-top: 0;
-        background: white;
+        background: #af0202;
         box-shadow: none;
     }
 
